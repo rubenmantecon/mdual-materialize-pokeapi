@@ -18,3 +18,22 @@ html, body {height: 100%;}
 div.carousel {
 	height: 80%;
 }
+
+
+#pokecard {
+	  /* Add shadows to create the "card" effect */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 20%;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+						
+}
+
+#pokecard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.pokecardcontainer {
+  padding: 2px 16px;
+}

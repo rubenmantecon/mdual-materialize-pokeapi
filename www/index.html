@@ -16,7 +16,7 @@
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
 	<meta http-equiv="Content-Security-Policy"
-		content="default-src https://fonts.gstatic.com https://code.jquery.com 'self' data: gap: https://ssl.gstatic.com https://pokeapi.co 'unsafe-eval'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; media-src *; img-src 'self' data: content:;" />
+		content="default-src https://fonts.gstatic.com https://code.jquery.com 'self' data: gap: https://ssl.gstatic.com https://pokeapi.co 'unsafe-eval'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; media-src *; img-src 'self' https://raw.githubusercontent.com https://1000logos.net data: content:;" />
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="msapplication-tap-highlight" content="no" />
 
@@ -31,76 +31,50 @@
 </head>
 
 <body>
-	<nav class="light-blue lighten-1" role="navigation">
+	<nav class="red lighten-2" role="navigation">
 		<div class="nav-wrapper container">
-			<a id="logo-container" href="#" class="brand-logo">Logo</a>
-			<ul class="right hide-on-med-and-down">
-				<li><a href="#">Navbar Link</a></li>
-			</ul>
-
-			<ul id="nav-mobile" class="sidenav">
-				<li><a href="#">Navbar Link</a></li>
-			</ul>
+			<a id="logo-container" href="#" class="brand-logo">PokéApi Searcher</a>
 			<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 		</div>
 	</nav>
 
 	<!-- Search -->
-	<div id="test-swipe-1" class="col s12">
-
-		<input type="text" id="pokemonText" />
-		<a name="pokemon" class="waves-effect waves-light btn"><i
+	<div id="test-swipe-1" class="col s12 container center">
+		<div class="row">
+			<input class="input-field col s4 offset-l4 center" autofocus type="text" id="pokemonText" />
+		</div>
+		<a name="pokemon" class="waves-effect waves-light btn light-blue darken-4"><i
 				class="material-icons right">cloud</i>Call PokéApi</a>
 	</div>
 	<!-- Details -->
-	<div id="test-swipe-2" class="col s12"></div>
-	<!-- Favourites -->
-	<div id="test-swipe-3" class="col s12"></div>
+	<div id="test-swipe-2" class="col s12 valign-wrapper">
+		<div class="container center hoverable" id="pokecard">
+			<img src="">
+			<div class="pokecardcontainer red lighten-2">
+				<h4 class="center"></h4>
+				<p></p>
+				<ul class="center">
 
-	<!-- Sections bar -->
-	<ul id="tabs-swipe-demo" class="tabs">
-		<li class="tab col s3"><a href="#test-swipe-1">Test 1</a></li>
-		<li class="tab col s3">
-			<a class="active" href="#test-swipe-2">Test 2</a>
-		</li>
-		<li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
-	</ul>
+				</ul>
 
-	<footer class="page-footer orange">
-		<div class="container">
-			<div class="row">
-				<div class="col l6 s12">
-					<h5 class="white-text">Company Bio</h5>
-					<p class="grey-text text-lighten-4">
-						We are a team of college students working on this project like
-						it's our full time job. Any amount would help support and continue
-						development on this project and is greatly appreciated.
-					</p>
-				</div>
-				<div class="col l3 s12">
-					<h5 class="white-text">Settings</h5>
-					<ul>
-						<li><a class="white-text" href="#!">Link 1</a></li>
-						<li><a class="white-text" href="#!">Link 2</a></li>
-						<li><a class="white-text" href="#!">Link 3</a></li>
-						<li><a class="white-text" href="#!">Link 4</a></li>
-					</ul>
-				</div>
-				<div class="col l3 s12">
-					<h5 class="white-text">Connect</h5>
-					<ul>
-						<li><a class="white-text" href="#!">Link 1</a></li>
-						<li><a class="white-text" href="#!">Link 2</a></li>
-						<li><a class="white-text" href="#!">Link 3</a></li>
-						<li><a class="white-text" href="#!">Link 4</a></li>
-					</ul>
-				</div>
 			</div>
 		</div>
-		<div class="footer-copyright">
-			<div class="container">
-				Made by
-				<a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+	</div>
+	<!-- Favourites -->
+	<!-- <div id="test-swipe-3" class="col s12"></div>	 -->
+	<!-- Sections bar -->
+	<ul id="tabs-swipe-demo" class="tabs">
+		<li class="tab col s3"><a class="active" href="#test-swipe-1">Cerca</a></li>
+		<li class="tab col s3"><a href="#test-swipe-2">Mostra dades</a></li>
+	</ul>
+
+	<footer class="page-footer grey darken-3">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5 class="white-text">Bio</h5>
+				<p class="white-text">
+					Dayum man, PokéApi is pretty neat, if you ask me
+				</p>
 			</div>
 		</div>
 	</footer>
